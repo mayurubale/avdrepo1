@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage('Checkout code'){
             steps{
-                git url:'https://github.com/mayurubale/endtoendproject.git', branch: 'main'
+                git url:'https://github.com/mayurubale/avdrepo1.git', branch: 'main'
             }
         }
         stage('Build Image'){
