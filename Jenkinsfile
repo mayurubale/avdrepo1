@@ -6,6 +6,11 @@ pipeline{
                 git url:'https://github.com/mayurubale/avdrepo1.git', branch: 'main'
             }
         }
+         stage('cleanup'){
+            steps{
+                bat '''docker rm -f $(docker ps -q)'''
+            }
+        }
         stage('Build Image'){
             steps{
                 bat 'docker build -t myimage .'
